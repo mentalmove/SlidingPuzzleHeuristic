@@ -1,6 +1,9 @@
 <?php
     header("Content-Type: text/javascript");
-
+    /**
+     * Used only when javascript file 'js/functional.js' is embedded
+     * Easier to read version would be 'partial_solution_oop.php'
+     */
     error_reporting(E_STRICT | E_ALL);
 
     if ( !isset($_GET['puzzle']) || !$_GET['puzzle'] )
