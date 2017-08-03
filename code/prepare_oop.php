@@ -65,7 +65,7 @@
         /**
          * Free the row resp. column across from the preferred one
          * from the pieces we want to move.
-         * After that, the bboard's size will de facto be reduced to 12.
+         * After that, the board's size will de facto be reduced to 12.
          */
         private function respect_change ($change_add) {
             for ( $i = 0; $i < $this->cols; $i++ ) {
