@@ -666,6 +666,13 @@
         
         black_index = Math.floor(Math.random() * pieces);
         missing_piece = black_index + 1;
+        /**
+         * Javascript assings values to memory on the right site of an equation.
+         * That means in consequence that every datatype with sub-properties (i.e. every object)
+         * will be handled what in other languages is called 'by reference'.
+         * 
+         * In other words: All processes will be executed on the same instance of 'piece_line'.
+         */
         var piece_line = [];
         human_solving = 0;
         solution_found = 0;
