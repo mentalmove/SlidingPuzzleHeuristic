@@ -52,7 +52,7 @@
         /**
          * Informs home page to try again with higher failure tolerance
          */
-        protected function next_step ($new_piece_line, $new_moves_made, $new_preferred_pieces, $new_deprecated_positions) {
+        protected function next_step ($new_piece_line, $new_moves_made, $new_preferred_pieces, $new_tabu_pieces) {
         
             $statement = "if ( " . $this->callback . "_allowed ) ";
             $statement .= "load_js('";
@@ -90,7 +90,7 @@
             
             $this->stack_search($this->piece_line, $this->black_index, $this->moves_made, $this->offset, $this->preferred_pieces, Array(), $this->tabu_pieces);
     
-            $this->next_step($this->piece_line, $this->moves_made, $this->preferred_pieces, Array());
+            $this->next_step($this->piece_line, $this->moves_made, $this->preferred_pieces, $this->tabu_pieces);
         }
     }
     new SolvePuzzlePartially($_GET['puzzle']);
